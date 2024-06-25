@@ -1,12 +1,44 @@
 /* src/App.css */
 .App {
-  text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  padding: 20px;
+  background-color: #363636; opacity: 0.5;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.header-content h1 {
+  margin: 20;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  margin: 0 30px;
+  text-decoration: none;
+  text-align: right;
+  di
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
 }
 
@@ -14,15 +46,20 @@ main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 20px;
+.news, .people, .publications {
+  margin-bottom: 40px;
+}
+
+.news-item, .person {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
 }
 
 footer {
-  background-color: #282c34;
-  padding: 10px;
+  background-color: #4CAF50;
   color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
 }

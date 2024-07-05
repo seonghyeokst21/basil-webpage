@@ -9,6 +9,17 @@ function App() {
     const toggleNav = () => {
             setIsNavOpen(!isNavOpen);
         };
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        cssEase:'linear',
+        className: 'sl'
+        };
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +36,42 @@ function App() {
               <div className="bar"></div>
         </div>
       </header>
-      Slide
+      
+      <div className='slider'>
+        <h2> Single Item</h2>
+        <Slider {...settings}>
+          <div className='i1'>
+            <h3>
+            <img
+              src="Herb Basil.png"
+              width='100%'
+              height='1000vh'
+            />
+            </h3>
+          </div>
+          <div>
+            <h3>
+            <img
+             src="학교사진.jpg"
+             width='100%'
+             height='1000vh'
+            />
+            </h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </div>
       <main>
         
       <section id = "home" className="hero">

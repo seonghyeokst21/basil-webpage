@@ -52,7 +52,7 @@
     height: 3px;
     background-color: white;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 800px) {
     nav {
       display: none;
       flex-direction: column;
@@ -94,11 +94,9 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
   }
-
-
-
-
-
+  .slider {
+  }
+   
   main {
     padding: 20px;
   }
@@ -121,6 +119,7 @@
     box-sizing: border-box;
   }
   
+
   footer {
     background-color: #4CAF50;
     color: white;

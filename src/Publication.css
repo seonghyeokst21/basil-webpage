@@ -1,0 +1,20 @@
+.publication-container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .publication-item {
+    margin-bottom: 50px;
+  }
+  
+  .publication-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .publication-item p {
+    font-size: 18px;
+    color: gray;
+  }
+  

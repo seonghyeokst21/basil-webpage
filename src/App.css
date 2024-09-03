@@ -1,129 +1,94 @@
-/* src/App.css */
-.App {
-    font-family: Arial, sans-serif;
+/* App.css */
+
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
   
-  .App-header {
-    background-color: #363636;
-    padding: 10px;
-    color: black;
+  nav {
+    background-color: rgba(179, 179, 179, 0.6);
+    padding: 0px 0cqb;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     position: fixed;
-    left: 0%;
-    top:0%;
-    height: 50px;
     width: 100%;
+    top: 0;
+    z-index: 1000;
   }
   
-  h1 {
+  ul {
+    list-style-type: none;
     margin: 0;
-    width: 80px;
-  }
-  nav{
-    height:60px;
-    width:100%;
-    float: right;
-    margin-top:50px;
-  }
-
-  nav a {
-    color:white;
-    margin: 0 10px 10px 20px;
-    text-decoration: none;
-    
-    float: right;
-
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
   }
   
+  li {
+    margin: 0 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  li a:hover {
+    color: #555;
+  }
+  
+  /* 햄버거 메뉴 버튼 */
   .hamburger {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
   }
   
-  .hamburger .bar {
-    width: 25px;
+  .hamburger div {
+    width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: black;
   }
-  @media (max-width: 800px) {
-    nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      width: 200px;
-    }
   
-    nav.open {
-      height: max-content;
-      background-color: #363636;
-      display: flex;
-      margin-top: 0px;
+  .nav-menu {
+    display: flex;
+  }
+  
+  /* 800px 이하에서 메뉴를 숨기고 햄버거 버튼을 보이게 함 */
+  @media (max-width: 800px) {
+    .nav-menu {
+      display: none;
     }
   
     .hamburger {
       display: flex;
     }
-  }
-
-  .hero {
-    position: relative;
-    text-align: center;
-    margin-bottom: 20px;
+  
+    .nav-menu.active {
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 60px;
+      background-color: rgba(179, 179, 179, 0.6);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+    }
+  
+    .nav-menu li {
+      margin: 10px 0;
+    }
   }
   
-  .hero-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-  }
-  .slider {
-  }
-   
+  /* Add margin-top to the main content to avoid it being hidden behind the fixed nav */
   main {
-    padding: 20px;
-  }
-  
-  .news, .people, .publications {
-    margin-bottom: 40px;
-  }
-  
-  .news-items, .people, .publications {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .news-item, .person {
-    background: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ddd;
-    flex: 1 1 calc(33.333% - 40px); /* 3 columns layout */
-    box-sizing: border-box;
-  }
-  
-
-  footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    margin-top:0px; /*Adjust according to nav height */
   }
   

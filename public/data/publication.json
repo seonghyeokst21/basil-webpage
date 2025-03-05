@@ -1,0 +1,37 @@
+[
+    {
+        "authors": "K Choi, SH Kim, S Kim",
+        "title": "Self-Supervised Learning in Projection Domain for Low-Dose Cone-Beam CT",
+        "journal": "Medical Physics",
+        "year": 2023, 
+        "url": "https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16421"
+    },
+    {
+        "authors": "K Choi, S Kim, J Lim",
+        "title": "Self-Supervised Inter- and Intra-Slice Correlation Learning for Low-Dose CT Image Restoration without Ground Truth",
+        "journal": "Expert Systems with Applications",
+        "year": 2022,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0957417422012751"
+    },
+    {
+        "authors": "SJ Choi, ES Kim, K Choi",
+        "title": "Prediction of the histology of colorectal neoplasm in white light colonoscopic images using deep learning algorithms",
+        "journal": "Scientific Reports",
+        "year": 2021, 
+        "url" : "https://www.nature.com/articles/s41598-021-84299-2"
+    },
+    {
+        "authors": "K Choi, S Kim, J Lim",
+        "title": "StatNet: Statistical Image Restoration for Low-Dose CT using Deep Learning",
+        "journal": "IEEE Journal of Selected Topics in Signal Processing",
+        "year": 2020, 
+        "url" : "https://ieeexplore.ieee.org/document/9103190"
+    },
+    {
+        "authors": "J Kwon, K Choi",
+        "title": "Trainable Multi-contrast Windowing for Liver CT Segmentation",
+        "journal": "IEEE",
+        "year": 2020,
+        "url" : ""
+    }
+]

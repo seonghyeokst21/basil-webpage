@@ -1,0 +1,40 @@
+.project-contain{
+    max-width: 1000px; /* 최대 너비 */
+    width: 100%; /* 작은 화면에서는 화면 크기에 맞춤 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.projects {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.projects2 {
+    padding: 20px;
+    margin-top: 60px;
+    background-color: #f9f9f9;
+}
+
+.project-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-item {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.project-item p {
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.5;
+}

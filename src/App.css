@@ -1,0 +1,94 @@
+/* App.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    background-color: rgba(179, 179, 179, 0.6);
+    padding: 0px 0cqb;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  li a:hover {
+    color: #555;
+  }
+  
+  /* 햄버거 메뉴 버튼 */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  /* 800px 이하에서 메뉴를 숨기고 햄버거 버튼을 보이게 함 */
+  @media (max-width: 800px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-menu.active {
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 60px;
+      background-color: rgba(179, 179, 179, 0.6);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+    }
+  
+    .nav-menu li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Add margin-top to the main content to avoid it being hidden behind the fixed nav */
+  main {
+    margin-top:0px; /*Adjust according to nav height */
+  }
+  

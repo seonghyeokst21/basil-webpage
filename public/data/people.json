@@ -1,0 +1,71 @@
+{
+    "professor": {
+        "name": "kihwan choi",
+        "email": "kihwanc@seoultech.ac.kr",
+        "introduce": "Optimization Theory, Deep Learning, Medical image Processing",
+        "TEL":"02-970-9753",
+        "laboratory":"상상관 607호",
+        "education": [
+            {
+                "degree": "Bachelor of Electrical Engineering",
+                "institution": "Seoul National University",
+                "year": 2004
+            },
+            {
+                "degree": "Master of Electrical and Computer Engineering",
+                "institution": "Seoul National University",
+                "year": 2006
+            },
+            {
+                "degree": "Master of Electrical Engineering",
+                "institution": "Stanford University",
+                "year": 2008
+            },
+            {
+                "degree": "PhD in Electrical Engineering",
+                "institution": "Stanford University",
+                "year": 2014
+            }
+        ],
+        "career_highlights": [
+            {
+                "position": "Professional Researcher",
+                "organization": "Samsung Electronics Advanced Institute of Technology",
+                "period": "2014.4-2017.2"
+            },
+            {
+                "position": "Senior Researcher",
+                "organization": "Korea Institute of Science and Technology",
+                "period": "2017.3-2023.8"
+            },
+            {
+                "position": "Assistant Professor",
+                "organization": "Seoul National University of Science and Technology",
+                "period": "2023.9-present"
+            }
+        ],
+        "image": "images/people/Default.jpg"
+    },
+    "graduate_student_1": {
+        "name": "jangho kwon",
+        "email": "kzzangho@gmail.com",
+        "introduce": "medical image processing, deep learning, ",
+        "laboratory":"상상관 523호",
+        "image": "images/people/Default.jpg"
+    }, 
+    "undergraduate_student_1": {
+        "name": "seonghyeok kim",
+        "email": "seonghyeokst21@gmail.com",
+        "introduce": "medical image generation, machine learning",
+        "laboratory":"상상관 523호",
+        "image": "images/people/Default.jpg"
+    },
+    "undergraduate_student_2": {
+        "name": "yoolim han",
+        "email": "yoolim0108@naver.com",
+        "introduce": "deep leaning, machine learning",
+        "laboratory":"상상관 523호",
+        "image": "images/people/Default.jpg"
+    }
+    
+}

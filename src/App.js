@@ -11,7 +11,6 @@ import NewsDetail from './NewsDetail';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [newsItems, setNewsItems] = useState([]);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -54,7 +53,7 @@ function App() {
             <Route path="/Publication" element={<Publicationpage />} />
             <Route path="/Project" element={<Projectpage />} />
             <Route path="/People" element={<Peoplepage />} />
-            <Route path="/news/:id" element={<NewsDetail />} />
+            <Route path="/News/:id" element={<NewsDetail />} /> 
           </Routes>
         </main>
       </div>

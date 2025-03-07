@@ -1,82 +1,29 @@
-/* 기본 설정 */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* 메인 컨테이너 */
 .news-detail-container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 뒤로 가기 링크 */
-.back-link {
-    display: inline-block;
-    margin-bottom: 20px;
-    color:  #b0db8b;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.back-link:hover {
-    color: #b0db8b;
-    text-decoration: underline;
-}
-
-/* 헤더 스타일 */
-.news-detail-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.news-detail-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.news-detail-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 상단 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* 요약 스타일 */
-.news-detail-summary {
-    font-size: 1rem;
-    color: #555;
-    margin: 20px 0;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* 본문 콘텐츠 */
-.news-detail-content {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-    background-color: #fff;
+    min-height: 100vh;
+    padding: 30px 20px 40px 20px; /* 위쪽 여백 100px, 좌우 20px, 아래 40px */
+    background-color: #f9f9f9;
+  }
+  
+  .news-detail-content {
+    width: 100%;
+    max-width: 800px; /* 본문 너비 조정 */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.news-detail-paragraph {
-    margin: 10px 0;
-}
-
-/* 로딩 메시지 */
-.loading {
-    text-align: center;
-    font-size: 1.25rem;
-    color: #666;
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .news-detail-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+  }
+  

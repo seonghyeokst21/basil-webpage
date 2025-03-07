@@ -1,68 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .people-container {
-    margin-top: 40px;
-    max-width: 1000px; /* 최대 너비 */
-    width: 100%; /* 작은 화면에서는 화면 크기에 맞춤 */
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-top: 60px;
-  }
-  
-  .people-section {
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #f0f0f0;
-  }
-  
-  .people-h2 {
-    background-color: #b0db8b;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .people-profile {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .people-profile-image {
-    width: 150px;
-    height: 200px;
-    background-color: #ccc;
-    margin-right: 20px;
-    object-fit: cover; 
-  }
-  
-  .people-profile-info {
-    flex: 1;
-  }
-  
-  .people-profile-info h3 {
-    margin: 5px 0;
-  }
-  
-  .people-profile-info p {
-    margin: 5px 0;
-  }
-  
-  .people-education, .people-career, .people-papers {
-    margin-top: 20px;
-  }
-  
-  .people-education h4, .people-career h4, .people-papers h4 {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .people-papers ol {
-    padding-left: 20px;
-  }
-  
-  .people-papers li {
-    margin-bottom: 5px;
-  }
-  
+/* people.css */
+.people-container {
+  max-width: 1000px; /* 최대 너비 */
+  width: 100%; /* 작은 화면에서는 화면 크기에 맞춤 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.people-container h2 {
+  padding: 20px;
+  margin-top: 60px;
+  background-color: #f9f9f9;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.people-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.people-profile-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.people-profile-info {
+  flex: 1;
+}
+
+.people-profile-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.people-profile-info p {
+  margin-top: 8px;
+  color: #555;
+  line-height: 1.5;
+}

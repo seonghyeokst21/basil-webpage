@@ -2,12 +2,16 @@ import React, { useEffect, useState } from 'react';
 import './Publication.css';
 
 const Publication = () => {
-  const [PublicationItems, setPublicationItems] = useState([]);
+  const [publications, setPublications] = useState([]);
   
   useEffect(() => {
-    fetch('data/publication.json')
+    fetch('http://localhost:5000/api/all')
       .then((response) => response.json())
-      .then((data) => setPublicationItems(data))
+      .then((data) => {
+        if (data.publications) {
+          setPublications(data.publications);
+        }
+      })
       .catch((error) => console.error('Error fetching publications:', error));
   }, []);
 
@@ -16,14 +20,14 @@ const Publication = () => {
       <section id="publications2" className="publications2">
         <h2>Publications</h2>
         <div className="publication-items">
-          {PublicationItems.map((publication, index) => (
-            <div className="publication-item" key={index}>
+          {publications.map((publication) => (
+            <div className="publication-item" key={publication.id}>
               <div className="publication-content">
                 <h3>{publication.title}</h3>
                 <p><strong>Authors:</strong> {publication.authors}</p>
                 <p><strong>Journal:</strong> {publication.journal}</p>
                 <p><strong>Year:</strong> {publication.year}</p>
-                {publication.url && (
+                {publication.url && publication.url !== "URL 없음" && (
                   <a
                     href={publication.url}
                     target="_blank"

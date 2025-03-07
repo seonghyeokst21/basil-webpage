@@ -59,13 +59,6 @@
         "introduce": "medical image generation, machine learning",
         "laboratory":"상상관 523호",
         "image": "images/people/Default.jpg"
-    },
-    "undergraduate_student_2": {
-        "name": "yoolim han",
-        "email": "yoolim0108@naver.com",
-        "introduce": "deep leaning, machine learning",
-        "laboratory":"상상관 523호",
-        "image": "images/people/Default.jpg"
     }
     
 }

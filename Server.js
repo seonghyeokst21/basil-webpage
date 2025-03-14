@@ -110,6 +110,7 @@ const fetchAllNotionData = async () => {
                     introduce: page.properties?.introduce?.rich_text?.[0]?.text?.content || "소개 없음",
                     laboratory: page.properties?.laboratory?.rich_text?.[0]?.text?.content || "연구실 없음",
                     image: imageUrl || "https://your-default-image-url.com/default.png",
+                    position: page.properties?.position?.select?.name || "직책 없음", 
                 };
             });
         };
@@ -119,7 +120,7 @@ const fetchAllNotionData = async () => {
                 id: page.id,
                 title: page.properties?.title?.rich_text?.[0]?.text?.content || "제목 없음",
                 content: page.properties?.content?.rich_text?.[0]?.text?.content || "설명 없음",
-                progress: page.properties?.["current progress"]?.select?.name || "진행 상태 없음",
+                progress: page.properties?.progress?.select?.name || "진행 상태 없음",
             }));
 
         const formatPublicationsData = (pages) =>
@@ -183,6 +184,58 @@ const fetchNewsContent = async (pageId) => {
     }
 };
 
+const fetchPeopleContent = async (pageId) => {
+    try {
+        console.log(`🔍 Fetching Notion page content for ID: ${pageId}`);
+
+        const response = await axios.get(`https://api.notion.com/v1/blocks/${pageId}/children`, {
+            headers: {
+                Authorization: `Bearer ${NOTION_API_KEY}`,
+                "Notion-Version": "2022-06-28",
+            },
+        });
+
+        console.log("✅ Notion API Response:", JSON.stringify(response.data, null, 2));
+
+        return response.data.results
+            .map((block) => {
+                if (block.type === "paragraph") {
+                    return block.paragraph.rich_text.length > 0
+                        ? `<p>${block.paragraph.rich_text.map(t => t.text.content).join(" ")}</p>`
+                        : "";
+                }
+                if (block.type === "heading_1") {
+                    return `<h1>${block.heading_1.rich_text.map(t => t.text.content).join(" ")}</h1>`;
+                }
+                if (block.type === "heading_2") {
+                    return `<h4>${block.heading_2.rich_text.map(t => t.text.content).join(" ")}</h4>`;
+                }
+                if (block.type === "heading_3") {
+                    return `<h3>${block.heading_3.rich_text.map(t => t.text.content).join(" ")}</h3>`;
+                }
+                if (block.type === "bulleted_list_item") {
+                    return `<ul><li>${block.bulleted_list_item.rich_text.map(t => t.text.content).join(" ")}</li></ul>`;
+                }
+                if (block.type === "numbered_list_item") {
+                    return `<ol><li>${block.numbered_list_item.rich_text.map(t => t.text.content).join(" ")}</li></ol>`;
+                }
+                if (block.type === "quote") {
+                    return `<blockquote class="notion-quote">${block.quote.rich_text.map(t => t.text.content).join(" ")}</blockquote>`;
+                }
+                if (block.type === "image") {
+                    return `<img src="${block.image.file.url}" alt="Notion Image" style="max-width:100%; display:block; margin-top:10px;" />`;
+                }
+                return "";
+            })
+            .filter(text => text.trim() !== "") // 🔹 빈 블록 제거 (띄어쓰기 줄이기)
+            .join(""); // 🔹 `<br/>` 줄이기 위해 `join("")` 사용
+
+    } catch (error) {
+        console.error("🚨 Notion 본문 가져오기 실패:", error.response?.data || error.message);
+        return "❌ 내용 불러오기 실패";
+    }
+};
+
 // ✅ 개별 뉴스의 Notion 페이지 URL 반환 API
 app.get("/api/news/:id", async (req, res) => {
     const { id } = req.params;
@@ -194,6 +247,14 @@ app.get("/api/news/:id", async (req, res) => {
 app.get("/api/news/content/:id", async (req, res) => {
     const { id } = req.params;
     const content = await fetchNewsContent(id);
+    res.json({ content });
+});
+
+
+// ✅ 개별 뉴스 본문 가져오는 API 추가
+app.get("/api/people/content/:id", async (req, res) => {
+    const { id } = req.params;
+    const content = await fetchPeopleContent(id);
     res.json({ content });
 });
 

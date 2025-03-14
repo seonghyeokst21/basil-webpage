@@ -86,6 +86,25 @@ function Home() {
                     </div>
                 </section>
 
+                <section className="publications">
+                    <h2>Publications</h2>
+                    <div className="publication-items">
+                        {PublicationItems.length > 0 ? (
+                            PublicationItems.map((publication, index) => (
+                                <div className="publication-item" key={index}>
+                                    <div className="publication-content">
+                                        <h3>{publication.title}</h3>
+                                        <p><strong>Authors:</strong> {publication.authors}</p>
+                                        <p><strong>Journal:</strong> {publication.journal}</p>
+                                        <p><strong>Year:</strong> {publication.year}</p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>📚 등록된 논문이 없습니다.</p>
+                        )}
+                    </div>
+                </section>
                 <section id="people" className="people">
                     <h2>People</h2>
                     <div className="people-items">
@@ -106,25 +125,6 @@ function Home() {
                     </div>
                 </section>
 
-                <section className="publications">
-                    <h2>Publications</h2>
-                    <div className="publication-items">
-                        {PublicationItems.length > 0 ? (
-                            PublicationItems.map((publication, index) => (
-                                <div className="publication-item" key={index}>
-                                    <div className="publication-content">
-                                        <h3>{publication.title}</h3>
-                                        <p><strong>Authors:</strong> {publication.authors}</p>
-                                        <p><strong>Journal:</strong> {publication.journal}</p>
-                                        <p><strong>Year:</strong> {publication.year}</p>
-                                    </div>
-                                </div>
-                            ))
-                        ) : (
-                            <p>📚 등록된 논문이 없습니다.</p>
-                        )}
-                    </div>
-                </section>
 
                 <section id="projects" className="projects">
                     <h2>Projects</h2>

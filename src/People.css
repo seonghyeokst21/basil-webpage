@@ -1,9 +1,14 @@
-/* people.css */
 .people-container {
   max-width: 1000px; /* 최대 너비 */
   width: 100%; /* 작은 화면에서는 화면 크기에 맞춤 */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; /* 🔹 Publications과 동일하게 패딩 조정 */
+}
+
+/* 🔹 People의 배경색을 Publications과 맞춤 */
+.people-section {
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .people-container h2 {
@@ -12,29 +17,37 @@
   background-color: #f9f9f9;
 }
 
+/* 🔹 이미지 + 기본 정보 한 줄 정렬 */
+.people-main-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .people-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* 🔹 개별 프로필 카드 스타일 (Publications 스타일과 동일) */
 .people-profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 15px;
+  padding: 15px; /* 🔹 패딩을 Publications과 동일하게 */
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 🔹 이미지 크기 유지 */
 .people-profile-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 4px;
 }
 
+/* 🔹 기본 정보 스타일 */
 .people-profile-info {
   flex: 1;
 }
@@ -45,8 +58,34 @@
   color: #333;
 }
 
-.people-profile-info p {
-  margin-top: 8px;
-  color: #555;
+
+/* 🔹 직책별 그룹 구분 */
+.position-group {
+  margin-bottom: 30px;
+}
+
+/* 🔹 직책별 제목 스타일 */
+.position-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* 🔹 기본 정보와 본문 사이에 선 추가 */
+.profile-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* 🔹 Notion 본문 스타일 */
+.notion-content {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
   line-height: 1.5;
 }

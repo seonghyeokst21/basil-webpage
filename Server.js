@@ -275,3 +275,8 @@ app.get("/api/all", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`🚀 백엔드 서버가 http://localhost:${PORT} 에서 실행 중`);
 });
+
+app.get("/api/hello", (req, res) => {
+    res.json({ message: "✅ 서버 잘 작동 중입니다!" });
+  });
+  
